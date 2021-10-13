@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'cf_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php // get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 </div><!-- #page we need this extra closing tag here -->
 
