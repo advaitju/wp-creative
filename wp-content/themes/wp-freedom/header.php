@@ -28,30 +28,26 @@ $container = get_theme_mod( 'cf_container_type' );
 	<?php get_template_part( 'sidebar-templates/sidebar', 'headerfull' ); ?>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar">
+	<div id="wrapper-navbar" class="container">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'freedomtheme' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'freedomtheme' ); ?>
 			</h2>
-
-		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
-		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php echo get_bloginfo( 'name' ); ?></a>
 
 						<?php endif; ?>
 
@@ -81,9 +77,6 @@ $container = get_theme_mod( 'cf_container_type' );
 					)
 				);
 				?>
-			<?php if ( 'container' === $container ) : ?>
-			</div><!-- .container -->
-			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
